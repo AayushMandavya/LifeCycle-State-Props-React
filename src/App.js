@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { Component } from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component{
+  constructor(){
+    super();
+
+    console.log("Constructor");
+  }
+
+  componentDidMount(){
+    //backend
+    console.log("Component did mount");
 }
 
+componentDidUpdate(){
+  console.log(" update");
+}
+
+//update chai sabai render matra huncha, render part ma state huncha so state update cha render ma
+  render() {
+    return (
+      <div>
+        <h1>
+          {this.props.Title}
+        </h1>
+      </div>
+    );
+  }
+}
 export default App;
